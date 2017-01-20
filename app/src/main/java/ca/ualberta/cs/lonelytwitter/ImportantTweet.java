@@ -12,7 +12,11 @@ public class ImportantTweet extends Tweet {
         super(date, message);
     }
 
+    public ImportantTweet(String message){
+        super(message);
+    }
+
     public Boolean isImportant(){
-        return Boolean.TRUE;
+        return true;
     }
 }
