@@ -10,14 +10,14 @@ public abstract class Tweet extends Object{
     public Date getDate() {
         return date;
     }
-
     public void setDate(Date date) {
         this.date = date;
     }
-
     public String getMessage() {
         return message;
     }
+    private Date date;
+    private String message;
 
     public void setMessage(String message) throws TweetTooLongException{
         if (message.length() > 140){
@@ -25,9 +25,6 @@ public abstract class Tweet extends Object{
         }
         this.message = message;
     }
-
-    private Date date;
-    private String message;
 
 
     public Tweet(String message){
@@ -41,5 +38,10 @@ public abstract class Tweet extends Object{
     }
 
     public abstract Boolean isImportant();
+
+    @Override
+    public String toString(){
+        return date.toString() + " | " + message;
+    }
 
 }
