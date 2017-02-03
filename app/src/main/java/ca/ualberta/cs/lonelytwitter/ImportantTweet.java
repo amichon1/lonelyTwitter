@@ -3,7 +3,7 @@ package ca.ualberta.cs.lonelytwitter;
 import java.util.Date;
 
 /**
- * Created by Alex on 2017-01-19.
+ * ImportantTweet extends Tweet
  */
 
 public class ImportantTweet extends Tweet {

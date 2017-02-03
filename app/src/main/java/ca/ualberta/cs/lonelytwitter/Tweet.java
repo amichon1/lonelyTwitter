@@ -3,7 +3,7 @@ package ca.ualberta.cs.lonelytwitter;
 import java.util.Date;
 
 /**
- * Created by Alex on 2017-01-19.
+ * This Class is a tweet
  */
 
 public abstract class Tweet extends Object{
@@ -19,6 +19,12 @@ public abstract class Tweet extends Object{
     private Date date;
     private String message;
 
+    /**
+     * Sets a message
+     * Checks if message is too long
+     * @param message
+     * @throws TweetTooLongException
+     */
     public void setMessage(String message) throws TweetTooLongException{
         if (message.length() > 140){
             throw new TweetTooLongException();
@@ -32,6 +38,11 @@ public abstract class Tweet extends Object{
         this.date = new Date();
     }
 
+    /**
+     * Saves date of a message
+     * @param date
+     * @param message
+     */
     public Tweet(Date date, String message){
         this.message = message;
         this.date = date;
