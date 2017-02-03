@@ -3,7 +3,7 @@ package ca.ualberta.cs.lonelytwitter;
 import java.util.Date;
 
 /**
- * This Class is a tweet
+ * This Class represents a tweet as a string
  */
 
 public abstract class Tweet extends Object{
@@ -50,6 +50,10 @@ public abstract class Tweet extends Object{
 
     public abstract Boolean isImportant();
 
+    /**
+     * Adds date and message into a single string
+     * @return date + message
+     */
     @Override
     public String toString(){
         return date.toString() + " | " + message;
